@@ -28,14 +28,14 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
       </div>
 
       {/* Employee Profiles Grid */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-2 xl:gap-8">
         {/* Profile cards */}
-        <div className="card glass w-full max-w-xs mx-auto">
+        <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
             <img
               src="/images/IMG_9827.jpg"
               alt="Profile"
-              className="w-50 h-auto object-cover"
+              className="w-96 h-auto object-cover"
             />
           </figure>
           <div className="card-body">
@@ -48,12 +48,12 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
         </div>
 
         {/* Repeat for other profiles */}
-        <div className="card glass w-full max-w-xs mx-auto">
+        <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
             <img
               src="/images/IMG_9843.jpg"
               alt="Profile"
-              className="w-50 h-auto object-cover"
+              className="w-96 h-auto object-cover"
             />
           </figure>
           <div className="card-body">
@@ -65,12 +65,12 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
           </div>
         </div>
 
-        <div className="card glass w-full max-w-xs mx-auto">
+        <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
             <img
               src="/images/IMG_9844.jpg"
               alt="Profile"
-              className="w-50 h-auto object-cover"
+              className="w-96 h-auto object-cover"
             />
           </figure>
           <div className="card-body">
@@ -82,12 +82,12 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
           </div>
         </div>
 
-        <div className="card glass w-full max-w-xs mx-auto">
+        <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
             <img
               src="/images/IMG_9828.jpg"
               alt="Profile"
-              className="w-50 h-auto object-cover"
+              className="w-96 h-auto object-cover"
             />
           </figure>
           <div className="card-body">

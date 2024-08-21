@@ -14,17 +14,17 @@ interface EmployeeStatProps {
 
 const EmployeeStat: React.FC<EmployeeStatProps> = ({ employees }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 -mt-48">
+    <div className="flex flex-col items-center justify-center min-h-screen p-2 -mt-48">
       {/* Header and Paragraph */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-4 text-gray-900">Employee Statistics</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:w-4/5">
           Here is an overview of key statistics related to our employees. These metrics provide insights into our engagement and productivity.
         </p>
       </div>
       
       {/* Stats Section */}
-      <div className="stats shadow-2xl max-w-4xl mx-auto">
+      <div className="stats shadow-2xl max-w-4xl mx-auto lg:w-4/5">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg

@@ -16,7 +16,7 @@ interface EmployeeHeroProps {
 
 const EmployeeHero: React.FC<EmployeeHeroProps> = ({ employees }) => {
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="flex justify-center items-center w-full lg:w-auto">
       {/* Page content here */}
       <div className="relative w-full max-w-screen-lg h-[70vh] mb-20">
         {/* Background Image */}

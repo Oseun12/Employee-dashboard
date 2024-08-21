@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div
-  className="hero min-h-screen">
+  className="hero min-h-screen w-full">
     <Image
             src="/images/Office-layoit-with-planters-700x467.jpg"
             alt="Office Image"
@@ -24,8 +24,8 @@ export default function Home() {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-neutral-content text-center glass rounded-3xl text-black">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Welcome</h1>
-      <p className="mb-5">
+      <h1 className="mb-5 text-5xl font-bold text-white">Welcome</h1>
+      <p className="mb-5 text-white">
       At Chels Office, we believe in fostering a collaborative environment where innovation meets dedication. Our team is committed to delivering exceptional service, ensuring that every interaction is meaningful and productive. We strive to create a space where ideas flourish, and every individual feels valued. Whether you are a client seeking unparalleled expertise or an employee ready to make an impact, Chels Office is the place where your journey begins.
 
       </p>

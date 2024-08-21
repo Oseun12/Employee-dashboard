@@ -18,7 +18,7 @@ type Employee = {
 const EmployeeList = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [theme, setTheme] = useState("light");
-  
+
   const fetchEmployees = async () => {
     try {
       const response = await fetch("/api/employees");
@@ -49,10 +49,10 @@ const EmployeeList = () => {
   }, [theme]);
 
   return (
-    <div>
+    <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
       <div className="drawer lg:drawer-open">
         {/* Navbar */}
-        <nav className="bg-base-100 w-full fixed top-0 z-10">
+        <nav className="bg-base-100 w-full fixed top-0 z-10 lg:w-4/5">
           <div className="container mx-auto px-4 flex justify-between items-center h-16">
             {/* Left-aligned items */}
             <div className="flex items-center space-x-4">
@@ -100,8 +100,6 @@ const EmployeeList = () => {
                 </svg>
               </button>
 
-              
-
               {/* Theme Toggle */}
               <input
                 type="checkbox"
@@ -116,22 +114,18 @@ const EmployeeList = () => {
               <a className="btn btn-ghost text-xl">Chels-Office</a>
             </div>
           </div>
-      </nav>
+        </nav>
 
-        <EmployeeHero employees={employees} />
-        <EmployeeProfile employees={employees} />
-
-        <div className="-mt-1">
+        <div className="mt-16"> {/* Add margin to avoid overlap with fixed navbar */}
+          <EmployeeHero employees={employees} />
+          <EmployeeProfile employees={employees} />
           <EmployeeCarousal employees={employees} />
-        </div>
-
-        <div className="">
           <EmployeeStat employees={employees} />
         </div>
       </div>
 
       {/* Footer section */}
-      <footer className="footer bg-neutral text-neutral-content grid-rows-2 p-10 -mt-60">
+      <footer className="footer bg-neutral text-neutral-content grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 p-10 -mt-40 lg:w-4/5">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -152,7 +146,6 @@ const EmployeeList = () => {
           <a className="link link-hover">Privacy policy</a>
           <a className="link link-hover">Cookie policy</a>
         </nav>
-        
         <nav>
           <h6 className="footer-title">Explore</h6>
           <a className="link link-hover">Features</a>
@@ -189,7 +182,7 @@ const EmployeeList = () => {
                 viewBox="0 0 24 24"
                 className="fill-current">
                 <path
-                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.231 0-3.611.246-4.388 1.885-4.384 8.816-.004 6.851.757 8.583 4.384 8.82 3.604.246 11.631.246 15.231 0 3.609-.247 4.388-1.884 4.384-8.816.004-6.852-.756-8.584-4.384-8.82zm-11.494 11.601v-7.55l6.616 3.775-6.616 3.775z"></path>
               </svg>
             </a>
             <a>
@@ -200,7 +193,7 @@ const EmployeeList = () => {
                 viewBox="0 0 24 24"
                 className="fill-current">
                 <path
-                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                  d="M12 2c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6h6v-2h-4z"></path>
               </svg>
             </a>
           </div>
