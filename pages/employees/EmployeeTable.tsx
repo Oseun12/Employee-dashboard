@@ -15,7 +15,7 @@ interface EmployeeTableProps {
   employees: Employee[];
 }
 
-const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
+const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees = [] }) => {
   return (
     <div className="bg-white min-h-screen flex flex-col justify-center items-center py-24 sm:py-32">
       {/* Heading and Description */}
