@@ -79,7 +79,7 @@ const EmployeeDetail = () => {
             type="text"
             value={employee.name}
             onChange={(e) => setEmployee({ ...employee, name: e.target.value })}
-            className="input input-bordered border border-gray-300 p-3 rounded w-full"
+            className="input input-bordered border border-gray-300 p-3 rounded w-full text-white"
           />
         </div>
         <div className="mb-6">
@@ -88,7 +88,7 @@ const EmployeeDetail = () => {
             type="email"
             value={employee.email}
             onChange={(e) => setEmployee({ ...employee, email: e.target.value })}
-            className="input input-bordered border border-gray-300 p-3 rounded w-full"
+            className="input input-bordered border border-gray-300 p-3 rounded w-full text-white"
           />
         </div>
         <div className="mb-6">
@@ -97,7 +97,7 @@ const EmployeeDetail = () => {
             type="text"
             value={employee.role}
             onChange={(e) => setEmployee({ ...employee, role: e.target.value })}
-            className="input input-bordered border border-gray-300 p-3 rounded w-full"
+            className="input input-bordered border text-white border-gray-300 p-3 rounded w-full"
           />
         </div>
         <div className="flex gap-4">
