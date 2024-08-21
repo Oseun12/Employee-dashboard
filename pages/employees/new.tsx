@@ -26,7 +26,7 @@ const NewEmployee = () => {
       <div className="bg-white p-8 rounded shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Add New Employee</h1>
         <form onSubmit={handleSubmit}>
-          <label className="input input-bordered flex items-center gap-2 mb-6">
+          <label className="flex items-center gap-2 mb-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -39,13 +39,13 @@ const NewEmployee = () => {
             </svg>
             <input
               type="text"
-              className="grow"
+              className="bg-white border border-black text-black p-2 rounded grow"
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </label>
-          <label className="input input-bordered flex items-center gap-2 mb-6">
+          <label className="flex items-center gap-2 mb-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -56,13 +56,13 @@ const NewEmployee = () => {
             </svg>
             <input
               type="text"
-              className="grow"
+              className="bg-white border border-black text-black p-2 rounded grow"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
-          <label className="input input-bordered flex items-center gap-2 mb-6">
+          <label className="flex items-center gap-2 mb-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -72,7 +72,7 @@ const NewEmployee = () => {
                 d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
             </svg>
             <select
-              className="grow"
+              className="bg-white border border-black text-black p-2 rounded grow"
               value={role}
               onChange={(e) => setRole(e.target.value)}
             >
