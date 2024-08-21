@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+
 
 type Employee = {
   role: string;
@@ -28,33 +30,42 @@ const EmployeeCarousal: React.FC<EmployeeCarousalProps> = ({ employees }) => {
       
       <div className="carousel w-full h-[40vh] rounded-lg overflow-hidden">
         <div id="item1" className="carousel-item w-full">
-          <img
-            src="/images/Comfortable-Office-Environm.jpg"
-            className="w-full h-full object-cover"
-            alt="Office"
-          />
+        <Image
+          src="/images/Comfortable-Office-Environm.jpg"
+          alt="Office"
+          className="w-full h-full object-cover"
+          width={500} 
+          height={300}
+        />
+
         </div>
         <div id="item2" className="carousel-item w-full">
-          <img
-            src="/images/Office-layoit-with-planters-700x467.jpg"
-            className="w-full h-full object-cover"
-            alt="Office"
-          />
+        <Image
+          src="/images/Office-layoit-with-planters-700x467.jpg"
+          alt="Office"
+          className="object-cover"
+          width={1200} 
+          height={800} 
+        />
         </div>
         <div id="item3" className="carousel-item w-full">
-          <img
-            src="/images/work-environment.png"
-            className="w-full h-full object-cover"
-            alt="Office"
-          />
+        <Image
+          src="/images/work-environment.png"
+          layout="responsive" 
+          width={1200} 
+          height={800} 
+          alt="Office"
+        />
         </div>
 
         <div id="item4" className="carousel-item w-full">
-          <img
-            src="/images/office2.jpg"
-            className="w-full h-full object-cover"
+        <Image
+          src="/images/office2.jpg" 
+          layout="responsive" 
+            width={1200} 
+            height={800} 
             alt="Office"
-          />
+        />
         </div>
       </div>
       <div className="flex w-full justify-center gap-2 py-2 mt-4">

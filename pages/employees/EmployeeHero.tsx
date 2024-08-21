@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from 'next/image';
+
 
 type Employee = {
   role: string;
@@ -20,11 +22,13 @@ const EmployeeHero: React.FC<EmployeeHeroProps> = ({ employees }) => {
       {/* Page content here */}
       <div className="relative w-full max-w-screen-lg h-[70vh] mb-20">
         {/* Background Image */}
-        <img
-          alt="workspace"
-          src="/images/mh_prd_workspaces.jpg.rendition.480.360.jpg"
-          className="w-full h-full object-cover rounded-lg"
-        />
+        <Image
+        src="/images/mh_prd_workspaces.jpg.rendition.480.360.jpg"
+        alt="workspace"
+        layout="fill" 
+        objectFit="cover" 
+        className="rounded-lg"
+      />
 
         {/* Centered Text and Button */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50 rounded-lg">

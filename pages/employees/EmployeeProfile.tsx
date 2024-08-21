@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 type Employee = {
   role: string;
@@ -16,7 +17,7 @@ interface EmployeeCarousalProps {
 
 const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 lg:w-9/12">
       {/* Heading and Description */}
       <div className="max-w-2xl mb-8 text-center mx-auto">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -32,11 +33,14 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
         {/* Profile cards */}
         <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
-            <img
-              src="/images/IMG_9827.jpg"
-              alt="Profile"
-              className="w-96 h-auto object-cover"
-            />
+          <Image
+            src="/images/IMG_9827.jpg"
+            alt="Profile"
+            layout="responsive" 
+            width={500} 
+            height={800} 
+            className="object-cover rounded-lg" 
+          />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Marilyn Chels</h2>
@@ -50,11 +54,14 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
         {/* Repeat for other profiles */}
         <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
-            <img
-              src="/images/IMG_9843.jpg"
-              alt="Profile"
-              className="w-96 h-auto object-cover"
-            />
+          <Image
+            src="/images/IMG_9843.jpg"
+            alt="Profile"
+            layout="responsive" 
+            width={384} 
+            height={800} 
+            className="object-cover" 
+          />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Acher Damisi</h2>
@@ -67,11 +74,14 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
 
         <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
-            <img
-              src="/images/IMG_9844.jpg"
-              alt="Profile"
-              className="w-96 h-auto object-cover"
-            />
+          <Image
+            src="/images/IMG_9844.jpg"
+            alt="Profile"
+            layout="responsive" 
+            width={384} 
+            height={800}
+            className="object-cover"
+          />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Christa Ben</h2>
@@ -84,11 +94,14 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
 
         <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
-            <img
-              src="/images/IMG_9828.jpg"
-              alt="Profile"
-              className="w-96 h-auto object-cover"
-            />
+          <Image
+            src="/images/IMG_9828.jpg"
+            alt="Profile"
+            layout="responsive"
+            width={384} 
+            height={800} 
+            className="object-cover" 
+          />
           </figure>
           <div className="card-body">
             <h2 className="card-title">Ashley Rachael</h2>
