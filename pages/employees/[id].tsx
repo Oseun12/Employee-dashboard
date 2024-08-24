@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 type Employee = {
+  _id: string;
   name: string;
   email: string;
   role: string;
@@ -41,13 +42,15 @@ const EmployeeDetail = () => {
 
   const handleUpdate = async () => {
     if (employee) {
+      const { _id, ...updatedEmployee } = employee;
+
       try {
         const response = await fetch(`/api/employees/${id}`, {
           method: 'PUT',
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(employee),
+          body: JSON.stringify(updatedEmployee),
         });
 
         if (!response.ok) {
@@ -71,7 +74,7 @@ const EmployeeDetail = () => {
 
   return employee ? (
     <div className="min-h-screen flex justify-center items-center bg-gray-200">
-      <div className="bg-white p-12 w-full max-w-lg rounded-lg shadow-2xl">
+      <div className="bg-gray-400 p-12 w-full max-w-lg rounded-lg shadow-2xl">
         <h1 className="text-3xl font-bold mb-6">Employee Details</h1>
         <div className="mb-6">
           <label className="block mb-2 text-gray-700">Name:</label>
@@ -79,7 +82,7 @@ const EmployeeDetail = () => {
             type="text"
             value={employee.name}
             onChange={(e) => setEmployee({ ...employee, name: e.target.value })}
-            className="input input-bordered border border-gray-300 p-3 rounded w-full text-white"
+            className="input input-bordered border border-gray-300 p-3 rounded w-full bg-white"
           />
         </div>
         <div className="mb-6">
@@ -88,7 +91,7 @@ const EmployeeDetail = () => {
             type="email"
             value={employee.email}
             onChange={(e) => setEmployee({ ...employee, email: e.target.value })}
-            className="input input-bordered border border-gray-300 p-3 rounded w-full text-white"
+            className="input input-bordered border border-gray-300 p-3 rounded w-full bg-white"
           />
         </div>
         <div className="mb-6">
@@ -97,7 +100,7 @@ const EmployeeDetail = () => {
             type="text"
             value={employee.role}
             onChange={(e) => setEmployee({ ...employee, role: e.target.value })}
-            className="input input-bordered border text-white border-gray-300 p-3 rounded w-full"
+            className="input input-bordered border  border-gray-300 p-3 rounded w-full bg-white"
           />
         </div>
         <div className="flex gap-4">
