@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       break;
     case 'PUT':
       const updatedEmployee = req.body;
-      await db.collection('employees').updateOne({ _id: new ObjectId(id) }, { $set: updatedEmployee });
+      await db.collection('employees').updateOne({ _id: new ObjectId(id as string) }, { $set: updatedEmployee });
       res.json({ success: true });
       break;
     case 'DELETE':
