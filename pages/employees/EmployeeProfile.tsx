@@ -29,7 +29,7 @@ const EmployeeProfile: React.FC<EmployeeCarousalProps> = () => {
       </div>
 
       {/* Employee Profiles Grid */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-2 xl:gap-8">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-2 xl:gap-8">
         {/* Profile cards */}
         <div className="card glass w-full max-w-sm mx-auto">
           <figure className="flex justify-center">
