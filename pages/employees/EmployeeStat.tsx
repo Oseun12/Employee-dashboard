@@ -14,7 +14,7 @@ interface EmployeeStatProps {
 
 const EmployeeStat: React.FC<EmployeeStatProps> = ({ employees }) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-2 -mt-48">
+    <div className="flex flex-col items-center justify-center min-h-screen p-2 mb-4 md:-mb-48 md:-mt-48">
       {/* Header and Paragraph */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-4 text-gray-900">Employee Statistics</h1>
